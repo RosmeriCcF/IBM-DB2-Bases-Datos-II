@@ -1,3 +1,4 @@
+--Tener en cuenta que si el nombre del SCHEMA se ha cambiado, entonces también se debe cambiar en estas sentencias.
 CREATE TABLE SCHEMA_TIENDA.TBL_USUARIOS (
     ID_USUARIO INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY (
         START WITH 1 INCREMENT BY 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 20
