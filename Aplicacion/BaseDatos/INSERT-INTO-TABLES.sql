@@ -264,3 +264,30 @@ INSERT INTO SCHEMA_TIENDA.TBL_CUENTAS (ID_USUARIO,CUENTA,CONTRASEÑA,TIPO_CUENTA
 INSERT INTO SCHEMA_TIENDA.TBL_CUENTAS (ID_USUARIO,CUENTA,CONTRASEÑA,TIPO_CUENTA,FLAG_ACTIVIDAD,FECHA_REGISTRO,USUARIO_REGISTRO)  VALUES('9', 'MVASQUEZG', '704961', '2', '1', CURRENT_DATE, 1);
 INSERT INTO SCHEMA_TIENDA.TBL_CUENTAS (ID_USUARIO,CUENTA,CONTRASEÑA,TIPO_CUENTA,FLAG_ACTIVIDAD,FECHA_REGISTRO,USUARIO_REGISTRO)  VALUES('10', 'PMAMANIS', '745950', '2', '1', CURRENT_DATE, 1);
 
+
+-- INSERTANDO DATOS A LA TABLA DE PROVEEDORES
+INSERT INTO SCHEMA_TIENDA.TBL_PROVEEDORES (ID_PROVEEDOR, NOMBRE, DIRECCION, TELEFONO, CORREO)
+VALUES
+    (DEFAULT, 'Proveedor1', 'Calle 123, Ciudad A', 912345678, 'proveedor1@email.com'),
+    (DEFAULT, 'Proveedor2', 'Avenida XYZ, Ciudad B', 998765432, 'proveedor2@email.com'),
+    (DEFAULT, 'Proveedor3', 'Calle ABC, Ciudad C', 955544433, 'proveedor3@email.com'),
+    (DEFAULT, 'Proveedor4', 'Avenida 456, Ciudad D', 911122334, 'proveedor4@email.com'),
+    (DEFAULT, 'Proveedor5', 'Calle ZZZ, Ciudad E', 988877766, 'proveedor5@email.com'),
+    (DEFAULT, 'Proveedor6', 'Avenida KLM, Ciudad F', 933322211, 'proveedor6@email.com'),
+    (DEFAULT, 'Proveedor7', 'Calle 789, Ciudad G', 944455566, 'proveedor7@email.com'),
+    (DEFAULT, 'Proveedor8', 'Avenida HIJ, Ciudad H', 999888777, 'proveedor8@email.com'),
+    (DEFAULT, 'Proveedor9', 'Calle LMN, Ciudad I', 966677788, 'proveedor9@email.com'),
+    (DEFAULT, 'Proveedor10', 'Avenida UVW, Ciudad J', 912312312, 'proveedor10@email.com'),
+    (DEFAULT, 'Proveedor11', 'Calle 456, Ciudad K', 945678901, 'proveedor11@email.com'),
+    (DEFAULT, 'Proveedor12', 'Avenida QWE, Ciudad L', 978901234, 'proveedor12@email.com'),
+    (DEFAULT, 'Proveedor13', 'Calle ASD, Ciudad M', 934567890, 'proveedor13@email.com'),
+    (DEFAULT, 'Proveedor14', 'Avenida YUI, Ciudad N', 967890123, 'proveedor14@email.com'),
+    (DEFAULT, 'Proveedor15', 'Calle OPU, Ciudad O', 923456789, 'proveedor15@email.com'),
+    (DEFAULT, 'Proveedor16', 'Avenida MNB, Ciudad P', 987654321, 'proveedor16@email.com'),
+    (DEFAULT, 'Proveedor17', 'Calle XYZ, Ciudad Q', 9111000999, 'proveedor17@email.com'),
+    (DEFAULT, 'Proveedor18', 'Avenida PLQ, Ciudad R', 999000111, 'proveedor18@email.com'),
+    (DEFAULT, 'Proveedor19', 'Calle 321, Ciudad S', 944433322, 'proveedor19@email.com'),
+    (DEFAULT, 'Proveedor20', 'Avenida JKL, Ciudad T', 955566677, 'proveedor20@email.com');
+
+
+
