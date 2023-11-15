@@ -16,8 +16,8 @@ namespace GFive.Tienda.Conexion
                 DB2ConnectionStringBuilder stringBuilder = new DB2ConnectionStringBuilder
                 {
                     Database = "DBTIENDA",
-                    UserID = "admin",
-                    Password = "admin",
+                    UserID = "db2admin",
+                    Password = "12345",
                     Server = "localhost:25000"
                 };
                 return stringBuilder.ConnectionString;
