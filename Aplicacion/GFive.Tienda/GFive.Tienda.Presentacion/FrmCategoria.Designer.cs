@@ -101,7 +101,7 @@
             this.btnNuevo.Text = "Nueva categoría";
             this.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNuevo.UseVisualStyleBackColor = false;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            this.btnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
             // 
             // label4
             // 
@@ -122,7 +122,7 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(199, 23);
             this.txtBuscar.TabIndex = 2;
-            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
+            this.txtBuscar.TextChanged += new System.EventHandler(this.TxtBuscar_TextChanged);
             // 
             // grdConsulta
             // 
@@ -173,7 +173,7 @@
             this.grdConsulta.ShowEditingIcon = false;
             this.grdConsulta.Size = new System.Drawing.Size(459, 319);
             this.grdConsulta.TabIndex = 0;
-            this.grdConsulta.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdConsulta_CellClick);
+            this.grdConsulta.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GrdConsulta_CellClick);
             // 
             // cId
             // 

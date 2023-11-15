@@ -7,7 +7,7 @@ namespace GFive.Tienda.Presentacion
 {
     public partial class FrmNuevaCategoria : Form
     {
-        CategoriaServicio servicio = new CategoriaServicio();
+        readonly CategoriaServicio servicio = new CategoriaServicio();
         private readonly Categoria categoria;
 
         public FrmNuevaCategoria()
@@ -26,12 +26,12 @@ namespace GFive.Tienda.Presentacion
             txtDescripcion.Text = categoria.Descripcion;
         }
 
-        private void txtDescripcion_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtDescripcion_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == 13) btnNuevo_Click(sender, e);
+            if (e.KeyChar == 13) BtnNuevo_Click(sender, e);
         }
 
-        private void btnNuevo_Click(object sender, EventArgs e)
+        private void BtnNuevo_Click(object sender, EventArgs e)
         {
             try
             {
@@ -39,6 +39,7 @@ namespace GFive.Tienda.Presentacion
                 {
                     servicio.Insert(new Categoria()
                     {
+                        IdCategoria = 0,
                         Descripcion = txtDescripcion.Text
                     });
                     MessageBox.Show("Se registró la categoría exitosamente.", "Registrar nueva categoría", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
@@ -48,7 +49,7 @@ namespace GFive.Tienda.Presentacion
                     categoria.Descripcion = txtDescripcion.Text;
                     servicio.Update(categoria);
 
-                    MessageBox.Show("Se actualizó la categoría exitosamente.", "Actualizar usuario", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+                    MessageBox.Show("Se actualizó la categoría exitosamente.", "Actualizar categoría", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
                 }
             }
             catch (Exception ex)
@@ -62,7 +63,7 @@ namespace GFive.Tienda.Presentacion
             }
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void BtnCancelar_Click(object sender, EventArgs e)
         {
             Close();
         }

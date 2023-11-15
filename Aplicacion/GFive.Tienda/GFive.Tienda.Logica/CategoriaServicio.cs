@@ -6,19 +6,26 @@ namespace GFive.Tienda.Logica
 {
     public class CategoriaServicio
     {
+        private readonly CategoriaRepositorio categoriaRepositorio;
+
+        public CategoriaServicio()
+        {
+            categoriaRepositorio = new CategoriaRepositorio();
+        }
+
         public DataTable SelectAll()
         {
-            return CategoriaRepositorio.GETCategorias().Tables[0];
+            return categoriaRepositorio.GETCategorias().Tables[0];
         }
 
         public void Update(Categoria categoria)
         {
-            CategoriaRepositorio.SETCategoria(categoria.IdCategoria, categoria.Descripcion);
+            categoriaRepositorio.SETCategoria(categoria);
         }
 
         public void Insert(Categoria categoria)
         {
-            CategoriaRepositorio.SETCategoria(0, categoria.Descripcion);
+            categoriaRepositorio.SETCategoria(categoria);
         }
     }
 }
