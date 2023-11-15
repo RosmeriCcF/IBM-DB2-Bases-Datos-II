@@ -284,7 +284,7 @@ VALUES
     (DEFAULT, 'Proveedor14', 'Avenida YUI, Ciudad N', 967890123, 'proveedor14@email.com'),
     (DEFAULT, 'Proveedor15', 'Calle OPU, Ciudad O', 923456789, 'proveedor15@email.com'),
     (DEFAULT, 'Proveedor16', 'Avenida MNB, Ciudad P', 987654321, 'proveedor16@email.com'),
-    (DEFAULT, 'Proveedor17', 'Calle XYZ, Ciudad Q', 9111000999, 'proveedor17@email.com'),
+    (DEFAULT, 'Proveedor17', 'Calle XYZ, Ciudad Q', 911100099, 'proveedor17@email.com'),
     (DEFAULT, 'Proveedor18', 'Avenida PLQ, Ciudad R', 999000111, 'proveedor18@email.com'),
     (DEFAULT, 'Proveedor19', 'Calle 321, Ciudad S', 944433322, 'proveedor19@email.com'),
     (DEFAULT, 'Proveedor20', 'Avenida JKL, Ciudad T', 955566677, 'proveedor20@email.com');
