@@ -1,4 +1,4 @@
-﻿namespace GFive.Tienda.Presentacion
+﻿﻿namespace GFive.Tienda.Presentacion
 {
     partial class FrmVenta
     {
@@ -747,7 +747,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1410, 892);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmVenta";
             this.Text = "FrmVenta";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
