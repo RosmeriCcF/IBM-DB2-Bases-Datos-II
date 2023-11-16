@@ -152,7 +152,19 @@
     <None Include="Resources\Login.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Password.png" />
+    <None Include="Resources\Agregar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Limpiar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VER.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -36,6 +36,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUsuario));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.filtroComboBox = new System.Windows.Forms.ComboBox();
@@ -124,6 +125,7 @@
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.ForeColor = System.Drawing.Color.White;
+            this.btnNuevo.Image = global::GFive.Tienda.Presentacion.Properties.Resources.Agregar;
             this.btnNuevo.Location = new System.Drawing.Point(500, 91);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(130, 34);
@@ -132,7 +134,6 @@
             this.btnNuevo.Text = "Nuevo usuario";
             this.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNuevo.UseVisualStyleBackColor = false;
-            this.btnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
             // 
             // lblTitulo
             // 
@@ -211,7 +212,6 @@
             this.grdConsulta.ShowEditingIcon = false;
             this.grdConsulta.Size = new System.Drawing.Size(901, 556);
             this.grdConsulta.TabIndex = 0;
-            this.grdConsulta.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GrdConsulta_CellClick);
             // 
             // cId
             // 
@@ -333,6 +333,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(907, 712);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmUsuario";
             this.Text = "FrmUsuario";
             this.Load += new System.EventHandler(this.FrmUsuario_Load);

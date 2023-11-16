@@ -70,15 +70,9 @@ namespace GFive.Tienda.Presentacion
 
             grdConsulta.DataSource = dvUsuarios;
         }
-        private void GrdConsulta_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
+  
 
-        }
-
-        private void BtnNuevo_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
     }
 }

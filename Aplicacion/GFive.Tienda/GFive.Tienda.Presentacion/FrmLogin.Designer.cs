@@ -30,6 +30,7 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txtVersion = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -47,16 +48,15 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnAcceder = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panelUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconoUsuario)).BeginInit();
             this.panelContraseña.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconoContraseña)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -88,6 +88,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(275, 530);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::GFive.Tienda.Presentacion.Properties.Resources.Logo;
+            this.pictureBox2.Location = new System.Drawing.Point(1, 135);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(272, 259);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
             // 
             // txtVersion
             // 
@@ -131,6 +141,7 @@
             this.panel2.Controls.Add(this.btnAcceder);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.ForeColor = System.Drawing.Color.Black;
             this.panel2.Location = new System.Drawing.Point(275, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
@@ -197,9 +208,11 @@
             // 
             // iconoUsuario
             // 
+            this.iconoUsuario.Image = global::GFive.Tienda.Presentacion.Properties.Resources.Login;
             this.iconoUsuario.Location = new System.Drawing.Point(13, 9);
             this.iconoUsuario.Name = "iconoUsuario";
             this.iconoUsuario.Size = new System.Drawing.Size(24, 24);
+            this.iconoUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.iconoUsuario.TabIndex = 0;
             this.iconoUsuario.TabStop = false;
             // 
@@ -254,6 +267,7 @@
             // 
             // iconoContraseña
             // 
+            this.iconoContraseña.Image = global::GFive.Tienda.Presentacion.Properties.Resources.VER;
             this.iconoContraseña.Location = new System.Drawing.Point(13, 9);
             this.iconoContraseña.Name = "iconoContraseña";
             this.iconoContraseña.Size = new System.Drawing.Size(24, 24);
@@ -301,16 +315,6 @@
             this.label5.TabIndex = 15;
             this.label5.Text = "Soporte:";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::GFive.Tienda.Presentacion.Properties.Resources.Logo;
-            this.pictureBox2.Location = new System.Drawing.Point(1, 106);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(272, 259);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
-            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -325,6 +329,7 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -334,7 +339,6 @@
             this.panelContraseña.ResumeLayout(false);
             this.panelContraseña.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconoContraseña)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -342,10 +346,6 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label txtVersion;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.CheckBox recuerdameCheckBox;
         private System.Windows.Forms.Button btnSalir;
@@ -360,6 +360,10 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnAcceder;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label txtVersion;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
