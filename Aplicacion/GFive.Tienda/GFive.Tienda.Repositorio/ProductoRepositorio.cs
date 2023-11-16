@@ -13,7 +13,7 @@ namespace GFive.Tienda.Repositorio
             return DBTIENDAContext.GET(storedProcedure, null);
         }
 
-        public int SETProducto(Producto producto)
+        public List<DbParametro> SETProducto(Producto producto)
         {
             string storedProcedure = "SCHEMA_TIENDA.SP_SET_PRODUCTO";
 

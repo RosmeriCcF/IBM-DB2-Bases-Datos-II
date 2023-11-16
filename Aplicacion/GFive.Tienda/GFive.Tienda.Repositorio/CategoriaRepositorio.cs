@@ -14,7 +14,7 @@ namespace GFive.Tienda.Repositorio
             return DBTIENDAContext.GET(storedProcedure, null);
         }
 
-        public int SETCategoria(Categoria categoria)
+        public List<DbParametro> SETCategoria(Categoria categoria)
         {
             string storedProcedure = "SCHEMA_TIENDA.SP_SET_CATEGORIA";
 

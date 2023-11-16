@@ -14,7 +14,7 @@ namespace GFive.Tienda.Repositorio
             return DBTIENDAContext.GET(storedProcedure, null);
         }
 
-        public int SETUsuario(Usuario usuario)
+        public List<DbParametro> SETUsuario(Usuario usuario)
         {
             string storedProcedure = "SCHEMA_TIENDA.SP_SET_USUARIO";
 

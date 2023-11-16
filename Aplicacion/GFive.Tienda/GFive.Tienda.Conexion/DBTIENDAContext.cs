@@ -16,8 +16,8 @@ namespace GFive.Tienda.Conexion
                 DB2ConnectionStringBuilder stringBuilder = new DB2ConnectionStringBuilder
                 {
                     Database = "DBTIENDA",
-                    UserID = "db2admin",
-                    Password = "db2admin",
+                    UserID = "admin",
+                    Password = "admin",
                     Server = "localhost:25000"
                 };
                 return stringBuilder.ConnectionString;
@@ -71,19 +71,18 @@ namespace GFive.Tienda.Conexion
             return dataSet;
         }
 
-        public static int SET(string query)
+        public static List<DbParametro> SET(string query)
         {
             return SET(query, null, CommandType.Text);
         }
 
-        public static int SET(string storedProcedure, List<DbParametro> dbParametros)
+        public static List<DbParametro> SET(string storedProcedure, List<DbParametro> dbParametros)
         {
             return SET(storedProcedure, dbParametros, CommandType.StoredProcedure);
         }
 
-        public static int SET(string storedProcedure, List<DbParametro> dbParametros, CommandType commandType)
+        public static List<DbParametro> SET(string storedProcedure, List<DbParametro> dbParametros, CommandType commandType)
         {
-            int filasAfectadas = 0;
             using (DB2Connection connection = new DB2Connection(ConnectionString))
             using (DB2Command command = new DB2Command(storedProcedure, connection))
             {
@@ -102,7 +101,15 @@ namespace GFive.Tienda.Conexion
                         }
                     }
 
-                    filasAfectadas = command.ExecuteNonQuery();
+                    command.ExecuteNonQuery();
+
+                    if (command.CommandType == CommandType.StoredProcedure && dbParametros != null && dbParametros.Count > 0)
+                    {
+                        foreach (DbParametro item in dbParametros)
+                        {
+                            item.Valor = command.Parameters[item.Nombre.ToUpper().Trim()].Value;                            
+                        }
+                    }
                 }
                 catch (Exception)
                 {
@@ -114,7 +121,7 @@ namespace GFive.Tienda.Conexion
                 }
             }
 
-            return filasAfectadas;
+            return dbParametros;
         }
     }
 }
