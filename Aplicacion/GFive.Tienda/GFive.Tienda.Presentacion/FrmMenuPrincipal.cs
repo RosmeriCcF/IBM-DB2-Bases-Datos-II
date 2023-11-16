@@ -60,5 +60,10 @@ namespace GFive.Tienda.Presentacion
         {
             frmLogin.Show();
         }
+
+        private void RegistroDeVentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowForm(new FrmVenta());
+        }
     }
 }

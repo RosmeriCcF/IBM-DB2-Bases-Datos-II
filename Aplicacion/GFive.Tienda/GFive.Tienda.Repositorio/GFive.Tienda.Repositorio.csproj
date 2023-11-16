@@ -42,10 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CategoriaRepositorio.cs" />
+    <Compile Include="ClienteRepositorio.cs" />
     <Compile Include="CuentaRepositorio.cs" />
     <Compile Include="ProductoRepositorio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsuarioRepositorio.cs" />
+    <Compile Include="VentaRepositorio.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GFive.Tienda.Conexion\GFive.Tienda.Conexion.csproj">

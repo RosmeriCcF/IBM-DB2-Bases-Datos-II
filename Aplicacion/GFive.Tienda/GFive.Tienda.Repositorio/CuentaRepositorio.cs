@@ -14,7 +14,7 @@ namespace GFive.Tienda.Repositorio
             return DBTIENDAContext.GET(storedProcedure, null);
         }
 
-        public int SETCuenta(Cuenta cuenta)
+        public List<DbParametro> SETCuenta(Cuenta cuenta)
         {
             string storedProcedure = "SCHEMA_TIENDA.SP_SET_CUENTA";
 
