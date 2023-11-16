@@ -54,7 +54,6 @@
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.menuStrip.SuspendLayout();
-            this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -269,8 +268,10 @@
             // panelContenedor
             // 
             this.panelContenedor.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panelContenedor.BackgroundImage = global::GFive.Tienda.Presentacion.Properties.Resources.IconoImage;
             this.panelContenedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContenedor.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.panelContenedor.Location = new System.Drawing.Point(0, 30);
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(807, 573);
@@ -293,8 +294,6 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMenuPrincipal_FormClosed);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
-            this.statusStrip.ResumeLayout(false);
-            this.statusStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
