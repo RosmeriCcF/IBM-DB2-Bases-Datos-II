@@ -16,5 +16,10 @@ namespace GFive.Tienda.Logica
         {
             return ventaRepositorio.SETVenta(venta);
         }
+
+        public void RegistrarDetalleVenta(int idVenta, int idProducto, decimal cantidad, string um)
+        {
+            ventaRepositorio.SETDetalleVenta(idVenta, idProducto, cantidad, um);
+        }
     }
 }
