@@ -97,6 +97,7 @@
             this.registroDeUsuariosToolStripMenuItem.Name = "registroDeUsuariosToolStripMenuItem";
             this.registroDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.registroDeUsuariosToolStripMenuItem.Text = "Registro de usuarios";
+            this.registroDeUsuariosToolStripMenuItem.Click += new System.EventHandler(this.registroDeUsuariosToolStripMenuItem_Click);
             // 
             // registroDeColaboradoresToolStripMenuItem
             // 
@@ -150,6 +151,7 @@
             this.registroDeCategoríasToolStripMenuItem1.Name = "registroDeCategoríasToolStripMenuItem1";
             this.registroDeCategoríasToolStripMenuItem1.Size = new System.Drawing.Size(205, 22);
             this.registroDeCategoríasToolStripMenuItem1.Text = "Registro de categorías";
+            this.registroDeCategoríasToolStripMenuItem1.Click += new System.EventHandler(this.registroDeCategoríasToolStripMenuItem1_Click);
             // 
             // registroDeClientesToolStripMenuItem
             // 
