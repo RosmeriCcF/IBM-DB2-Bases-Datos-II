@@ -18,7 +18,7 @@ namespace GFive.Tienda.Repositorio
                 new DbParametro("p_ID_CLIENTE", venta.IdCliente),
                 new DbParametro("p_ID_COLABORADOR", venta.IdColaborador),
                 new DbParametro("p_MEDIO_PAGO", venta.MedioPago),
-                new DbParametro("p_SUBTOTAL", venta.Subtotal),
+                new DbParametro("p_TOTAL", venta.Total),
                 new DbParametro("p_PORCENTAJE_IGV", venta.PorcentajeIgv),
                 new DbParametro("p_FLAG_DESCUENTO", venta.FlagDescuento),
                 new DbParametro("p_MONTO_DESCUENTO", venta.MontoDescuento),
@@ -32,6 +32,22 @@ namespace GFive.Tienda.Repositorio
 
             return idVenta;
         }
+
+        public void SETDetalleVenta(int idVenta, int idProducto, decimal cantidad, string um)
+        {
+            string storedProcedure = "SCHEMA_TIENDA.SP_REGISTRAR_DETALLE_VENTA";
+
+            List<DbParametro> dbParametros = new List<DbParametro>
+            {
+                new DbParametro("p_ID_VENTA", idVenta),
+                new DbParametro("p_ID_PRODUCTO", idProducto),
+                new DbParametro("p_CANTIDAD", cantidad),
+                new DbParametro("p_UM", um)
+            };
+
+            DBTIENDAContext.SET(storedProcedure, dbParametros);
+        }
+
 
     }
 }

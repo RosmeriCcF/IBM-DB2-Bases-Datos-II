@@ -135,20 +135,15 @@ namespace GFive.Tienda.Presentacion
         {
             productosDelCarrito.Clear();
             CarritoDataSource.DataSource = GetCarrito();
+
+            BtnLimpiar_Click(sender, e);
         }
 
         private void BtnVender_Click(object sender, EventArgs e)
         {
             try
             {
-                //AppEngine.compraDAL.Create(new Compra(0, DateTime.Now, AppEngine.Colaborador, Cliente));
-                //Compra compra = AppEngine.compraDAL.GetByID(0, Cliente.Id);
-                //foreach (Acumulado item in CarritoDataSource.DataSource as BindingList<Acumulado>)
-                //{
-                //    AppEngine.compraDAL.GenerateCompra(compra.Id, item.Id, item.Cantidad);
-                //}
-
-                ventaServicio.RegistrarVenta(new Venta
+                int idVenta = ventaServicio.RegistrarVenta(new Venta
                 {
                     IdCliente = Convert.ToInt32(txtIdCliente.Text),
                     IdColaborador = Sesion.UsuarioActual.Usuario.IdUsuario,
@@ -159,8 +154,12 @@ namespace GFive.Tienda.Presentacion
                     MontoDescuento = 0
                 });
 
+                foreach (Acumulado item in CarritoDataSource.DataSource as BindingList<Acumulado>)
+                {
+                    ventaServicio.RegistrarDetalleVenta(idVenta, item.IdProducto, item.Cantidad, "UNI");
+                }
 
-                MessageBox.Show("¡Se registró la compra exitosamente!", "Registro de compras", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+                MessageBox.Show("¡Se registró la venta exitosamente!", "Registro de ventas", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
                 Buscar();
                 BtnCancelar_Click(sender, e);
             }
